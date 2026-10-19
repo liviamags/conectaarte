@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f7f5">
+  <title>Inspira | Ideias para o seu dia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#" aria-label="Página inicial">
+      <span class="logo-mark">i.</span>
+      <span>inspira</span>
+    </a>
+    <span class="topbar-label">Ideias para o seu dia</span>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <span class="eyebrow">ENCONTRE SUA INSPIRAÇÃO</span>
+      <h1>Pequenas ideias.<br>Novas possibilidades.</h1>
+      <p>
+        Um espaço para descobrir ideias, explorar interesses
+        e encontrar inspiração para os seus próximos projetos.
+      </p>
+      <button class="primary-button" id="startButton">
+        Explorar agora <span aria-hidden="true">→</span>
+      </button>
+      <span class="small-note">Inspire-se. Descubra. Crie.</span>
+    </section>
+  </main>
+
+  <footer>
+    <span>Inspira © 2026</span>
+    <span>Termos de uso · Privacidade</span>
+  </footer>
+
+  <div class="consent-overlay" id="consentOverlay" hidden>
+    <section class="consent-box"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="consentTitle">
+
+      <span class="consent-label">SÓ MAIS UM PASSO</span>
+      <h2 id="consentTitle">Vamos deixar tudo pronto?</h2>
+
+      <p>
+        Queremos tornar sua experiência mais prática e
+        apresentar conteúdos que combinem com seus interesses.
+      </p>
+
+      <p class="consent-detail">
+        Vamos começar?
+      </p>
+
+      <button class="primary-button full-button" id="acceptButton">
+        Aceitar e continuar
+      </button>
+
+      <button class="secondary-button" id="settingsButton">
+        Personalizar preferências
+      </button>
+
+      <div class="settings-panel" id="settingsPanel" hidden>
+        <p><strong>Preferências de conteúdo</strong></p>
+        <label class="preference">
+          <input type="checkbox" id="analyticsOption">
+          <span>
+            <strong>Conteúdos personalizados</strong>
+            <small>Simular sugestões baseadas nos seus interesses.</small>
+          </span>
+        </label>
+        <button class="secondary-button" id="saveSettingsButton">
+          Salvar preferências
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <section class="reveal" id="revealScreen" hidden>
+    <div class="reveal-content">
+      <span class="eyebrow">UMA PAUSA PARA REFLETIR</span>
+      <h2 id="revealTitle">Você fez uma escolha.</h2>
+      <p id="revealText"></p>
+
+      <div class="reflection">
+        <span class="reflection-mark">?</span>
+        <p>Quantas vezes você aceita algo na internet sem pensar duas vezes?</p>
+      </div>
+
+      <button class="primary-button" id="restartButton">
+        Experimentar novamente ↻
+      </button>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>
